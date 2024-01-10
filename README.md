@@ -3,5 +3,5 @@ Run:
 	<p align="center"><img src="https://img-blog.csdnimg.cn/direct/a3888f577f6041028ca800be84800635.bmp" /></p>
 
 Build And Run (Used Visual Studio Studio 2019):
-	this first step is to Engine\SetEnv.bat
-	this second step is to click ..\Engine.sln and build x64
+	the first step is to Run Engine\SetEnv.bat
+	the second step is to click ..\Engine.sln and build x64
