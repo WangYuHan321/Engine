@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{cafa6abe-265f-4881-a87a-1b43d4701b3e}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin/</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../Bin/</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ENGINE_INC)\lib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ENGINE_LIB)\lib\x64/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;opengl32.lib;freeglut.lib;glew32.lib;assimp.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ENGINE_INC)\shader" "$(ENGINE_INC)\..\Bin"
+copy "$(ENGINE_LIB)\lib\x64\bin" "$(ENGINE_LIB)\..\Bin"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ENGINE_INC)\lib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ENGINE_INC)\lib\include;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;opengl32.lib;freeglut.lib;glew32.lib;assimp.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <PostBuildEvent>
+      <Command>copy "$(ENGINE_INC)\shader" "$(ENGINE_INC)\..\Bin"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Render\Vegetation\Tree\FractalTree.h" />
+    <ClInclude Include="Render\Vegetation\ProceduralVegetation.h" />
+    <ClInclude Include="Render\Program\PostProcessProgram\CloudFilterProgram.h" />
+    <ClInclude Include="Render\Program\CloudProgram\CloudShadowProgram.h" />
+    <ClInclude Include="Render\Init\NoiseInitializer.h" />
+    <ClInclude Include="Render\Program\DebugPorgram.h" />
+    <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Render\Manager\LightBufferManager.h" />
+    <ClInclude Include="Render\SkyBox\AbstractSkyBox.h" />
+    <ClInclude Include="Render\SkyBox\SkyBox.h" />
+    <ClInclude Include="Render\Terrain\Component\LandscapeComponent.h" />
+    <ClInclude Include="Render\Notifier\RenderableNotifier.h" />
+    <ClInclude Include="Render\Program\ProceduralTerrainProgram.h" />
+    <ClInclude Include="Render\Program\PostProcessProgram\DeferredShadingProgram.h" />
+    <ClInclude Include="Render\Light\PointLight.h" />
+    <ClInclude Include="Render\Light\SpotLight.h" />
+    <ClInclude Include="Render\Program\SkyProgram.h" />
+    <ClInclude Include="Render\SideBySideRender\SideBySideRenderer.h" />
+    <ClInclude Include="Render\Program\PostProcessProgram\SSGodRayProgram.h" />
+    <ClInclude Include="Render\Program\PostProcessProgram\SSReflectionProgram.h" />
+    <ClInclude Include="Table\DeferredRenderObjectsTable.h" />
+    <ClInclude Include="Table\ProgramTable.h" />
+    <ClInclude Include="Table\ShaderTable.h" />
+    <ClInclude Include="Table\MeshTable.h" />
+    <ClInclude Include="Render\Program\ComputeProgram\ComputeProgram.h" />
+    <ClInclude Include="Render\DeferredRender\DeferredCallback.h" />
+    <ClInclude Include="Render\Program\ProceduralWaterProgram.h" />
+    <ClInclude Include="Render\Program\PostProcessProgram\PostProcessProgram.h" />
+    <ClInclude Include="Render\Program\Program.h" />
+    <ClInclude Include="Render\Terrain\Component\TerrainComponent.h" />
+    <ClInclude Include="Table\TextureTable.h" />
+    <ClInclude Include="Util\Time.h" />
+    <ClInclude Include="Util\IOUtil.h" />
+    <ClInclude Include="Render\DeferredRender\DeferredRenderObject.h" />
+    <ClInclude Include="Render\Shadow\CascadeShadowMaps.h" />
+    <ClInclude Include="Render\DeferredRender\DeferredRenderer.h" />
+    <ClInclude Include="Render\Light\DirectionalLight.h" />
+    <ClInclude Include="Render\Renderer.h" />
+    <ClInclude Include="Render\Camera\Camera.h" />
+    <ClInclude Include="Config\WorldConfig.h" />
+    <ClInclude Include="Render\Light\Light.h" />
+    <ClInclude Include="Render\Texture\AbstractTexture.h" />
+    <ClInclude Include="Render\Texture\Texture2D.h" />
+    <ClInclude Include="Render\Texture\Texture3D.h" />
+    <ClInclude Include="Render\Texture\TextureInstance.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Render\Shadow\ShadowCaster.h" />
+    <ClInclude Include="Render\Terrain\Terrain.h" />
+    <ClInclude Include="Render\Shader\Shader.h" />
+    <ClInclude Include="Table\StorageTable.h" />
+    <ClInclude Include="Util\custom_math.h" />
+    <ClInclude Include="Render\Mesh\Mesh.h" />
+    <ClInclude Include="Render\IRenderable.h" />
+    <ClInclude Include="Render\Object\Object.h" />
+    <ClInclude Include="Util\common.h" />
+    <ClInclude Include="Util\Singleton.h" />
+    <ClInclude Include="Render\Program\ComputeProgram\VolumeTextureProgram.h" />
+    <ClInclude Include="Render\Terrain\Component\WaterComponent.h" />
+    <ClInclude Include="Render\Program\ComputeProgram\WeatherTextureProgram.h" />
+    <ClInclude Include="Render\Cloud\VolumetricClouds.h" />
+    <ClInclude Include="Render\Program\CloudProgram\VolumetricCloudProgram.h" />
+    <ClInclude Include="Window\Context\Device.h" />
+    <ClInclude Include="Window\Input\InputManager.h" />
+    <ClInclude Include="Window\Input\Key.h" />
+    <ClInclude Include="Window\Input\MouseBtn.h" />
+    <ClInclude Include="Window\WindowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Render\Vegetation\Tree\FractalTree.cpp" />
+    <ClCompile Include="Render\Vegetation\ProceduralVegetation.cpp" />
+    <ClCompile Include="Render\Program\PostProcessProgram\CloudFilterProgram.cpp" />
+    <ClCompile Include="Render\Program\CloudProgram\CloudShadowProgram.cpp" />
+    <ClCompile Include="Render\Init\NoiseInitializer.cpp" />
+    <ClCompile Include="Render\Program\DebugPorgram.cpp" />
+    <ClCompile Include="Render\Manager\LightBufferManager.cpp" />
+    <ClCompile Include="Render\SkyBox\AbstractSkyBox.cpp" />
+    <ClCompile Include="Render\SkyBox\SkyBox.cpp" />
+    <ClCompile Include="Render\Terrain\Component\LandscapeComponent.cpp" />
+    <ClCompile Include="Render\Notifier\RenderableNotifier.cpp" />
+    <ClCompile Include="Render\Program\ProceduralTerrainProgram.cpp" />
+    <ClCompile Include="Render\Program\PostProcessProgram\DeferredShadingProgram.cpp" />
+    <ClCompile Include="Render\Light\PointLight.cpp" />
+    <ClCompile Include="Render\Light\SpotLight.cpp" />
+    <ClCompile Include="Render\Program\SkyProgram.cpp" />
+    <ClCompile Include="Render\SideBySideRender\SideBySideRenderer.cpp" />
+    <ClCompile Include="Render\Program\PostProcessProgram\SSGodRayProgram.cpp" />
+    <ClCompile Include="Render\Program\PostProcessProgram\SSReflectionProgram.cpp" />
+    <ClCompile Include="Table\DeferredRenderObjectsTable.cpp" />
+    <ClCompile Include="Table\ProgramTable.cpp" />
+    <ClCompile Include="Table\ShaderTable.cpp" />
+    <ClCompile Include="Table\MeshTable.cpp" />
+    <ClCompile Include="Render\Program\ComputeProgram\ComputeProgram.cpp" />
+    <ClCompile Include="Render\DeferredRender\DeferredCallback.cpp" />
+    <ClCompile Include="Render\Program\ProceduralWaterProgram.cpp" />
+    <ClCompile Include="Render\Program\PostProcessProgram\PostProcessProgram.cpp" />
+    <ClCompile Include="Render\Program\Program.cpp" />
+    <ClCompile Include="Render\Terrain\Component\TerrainComponent.cpp" />
+    <ClCompile Include="Test\Source.cpp" />
+    <ClCompile Include="Table\TextureTable.cpp" />
+    <ClCompile Include="Util\Time.cpp" />
+    <ClCompile Include="Util\common.cpp" />
+    <ClCompile Include="Util\IOUtil.cpp" />
+    <ClCompile Include="Render\DeferredRender\DeferredRenderObject.cpp" />
+    <ClCompile Include="Render\Shadow\CascadeShadowMaps.cpp" />
+    <ClCompile Include="Render\DeferredRender\DeferredRenderer.cpp" />
+    <ClCompile Include="Render\Light\DirectionalLight.cpp" />
+    <ClCompile Include="Render\Renderer.cpp" />
+    <ClCompile Include="Render\Camera\Camera.cpp" />
+    <ClCompile Include="Config\WorldConfig.cpp" />
+    <ClCompile Include="Render\Light\Light.cpp" />
+    <ClCompile Include="Render\Texture\AbstractTexture.cpp" />
+    <ClCompile Include="Render\Texture\Texture2D.cpp" />
+    <ClCompile Include="Render\Texture\Texture3D.cpp" />
+    <ClCompile Include="Render\Texture\TextureInstance.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Render\Shadow\ShadowCaster.cpp" />
+    <ClCompile Include="Render\Terrain\Terrain.cpp" />
+    <ClCompile Include="Render\Shader\Shader.cpp" />
+    <ClCompile Include="Table\StorageTable.cpp" />
+    <ClCompile Include="Util\custom_math.cpp" />
+    <ClCompile Include="Render\Mesh\Mesh.cpp" />
+    <ClCompile Include="Render\IRenderable.cpp" />
+    <ClCompile Include="Render\Object\Object.cpp" />
+    <ClCompile Include="Render\Program\ComputeProgram\VolumeTextureProgram.cpp" />
+    <ClCompile Include="Render\Terrain\Component\WaterComponent.cpp" />
+    <ClCompile Include="Render\Program\ComputeProgram\WeatherTextureProgram.cpp" />
+    <ClCompile Include="Render\Cloud\VolumetricClouds.cpp" />
+    <ClCompile Include="Render\Program\CloudProgram\VolumetricCloudProgram.cpp" />
+    <ClCompile Include="Window\Context\Device.cpp" />
+    <ClCompile Include="Window\Input\InputManager.cpp" />
+    <ClCompile Include="Window\WindowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Event\Event.inl" />
+    <None Include="shader\postprocess\deferredshading.frag" />
+    <None Include="shader\terrain\terrain.frag" />
+    <None Include="shader\terrain\terrain.geom" />
+    <None Include="shader\terrain\terrain.tesctrl" />
+    <None Include="shader\terrain\terrain.teseval" />
+    <None Include="shader\terrain\terrain.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
