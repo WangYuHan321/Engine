@@ -7,8 +7,8 @@ layout (location=1) in vec2 inUV;
 // OUTPUT
 layout (location=0) out vec2 outUV;
 layout (location=1) out vec3 outPos;
-layout (location=2) out vec4 outShadowMapPos;
-layout (location=3) out vec4 outShadowMapPos1;
+layout (location=2) out vec4 inShadowMapPos;
+layout (location=3) out vec4 inShadowMapPos1;
 
 uniform ivec2 gridPos;
 
@@ -23,8 +23,8 @@ void main()
 	gl_Position = modelViewProj * vec4(inPos, 1.0);
 	outPos = (modelView * vec4(inPos, 1.0)).xyz;
 	outUV = abs(inUV + vec2(float(gridPos.x), float(gridPos.y)));
-	outShadowMapPos = lightDepthMat * vec4(inPos, 1.0);
-	outShadowMapPos1 = lightDepthMat1 * vec4(inPos, 1.0);
+	inShadowMapPos = lightDepthMat * vec4(inPos, 1.0);
+	inShadowMapPos1 = lightDepthMat1 * vec4(inPos, 1.0);
 #else
 	gl_Position = lightDepthMat * vec4(inPos, 1);
 #endif

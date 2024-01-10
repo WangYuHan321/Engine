@@ -5,11 +5,11 @@ layout (location=0) out vec4 outColor;
 layout (location=1) out vec4 outNormal;
 layout (location=2) out vec4 outSpecular;
 layout (location=3) out vec4 outEmissive;
-layout (location=4) out vec4 outPos;
+layout (location=4) out vec4 outPos1;
 layout (location=5) out vec4 outInfo;
 
-layout (location=0) in vec2 inUV;
-layout (location=1) in vec3 inPos;
+layout (location=0) in vec2 outUV;
+layout (location=1) in vec3 outPos;
 layout (location=2) in vec4 inShadowMapPos;
 layout (location=3) in vec4 inShadowMapPos1;
 
@@ -145,8 +145,8 @@ void main()
 #if defined WIRE_MODE || defined POINT_MODE
 	vec3 rawNormal = vec3(0,1,0);
 #else
-	float u = inUV.x;
-	float v = inUV.y;
+	float u = outUV.x;
+	float v = outUV.y;
 
 	// COMPUTE NORMAL
 	// ------------------------------------------------------------------------------
@@ -184,7 +184,7 @@ void main()
 	// ------------------------------------------------------------------------------
 	outColor = vec4(color, alpha);
 	outNormal = vec4(n, 1.0);
-	outPos = vec4(inPos, 1.0);
+	outPos1 = vec4(outPos, 1.0);
 	outInfo = vec4(0, visibility, 0, alpha);
 #if defined WIRE_MODE || defined POINT_MODE
 	outSpecular = vec4(0);

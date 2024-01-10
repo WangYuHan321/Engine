@@ -13,7 +13,8 @@ layout (location=0) in vec2 inUV[];
 
 layout (location=0) out vec2 outUV;
 layout (location=1) out vec3 outPos;
-layout (location=2) out vec4 outShadowMapPos;
+layout (location=2) out vec4 inShadowMapPos;
+layout (location=3) out vec4 inShadowMapPos1;
 
 void main()
 {
